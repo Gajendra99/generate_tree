@@ -28,9 +28,9 @@ To use this package, add <b>generate_tree</b> as a dependency in your pubspec.ya
 <li><b>change the colors of text</b></li>
 <li><b>onChecked function provides the value</b>
 <ul>
-<li>node: all child values and current selected node values</li>
-<li>checked: provides the bool value that the checkbox is checked or not</li>
-<li>commonID: returns the common id when selectOneToAll is true</li>
+<li><b>node:</b> all child values and current selected node values</li>
+<li><b>checked:</b> provides the bool value that the checkbox is checked or not</li>
+<li><b>commonID:</b> returns the common id when selectOneToAll is true</li>
 </ul>
 </li>
 </ul>
