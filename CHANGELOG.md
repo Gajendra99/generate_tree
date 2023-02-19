@@ -23,5 +23,12 @@
 
 ## 1.0.5
 <ul>
-<li>When the selectOneToAll property is true it will return the top node, so you can access all children node using that top node</li>
+<li>onChecked() will return top node with children when selectOneToAll property will be true.</li>
+<li>This data will help you to get all node details when parent checkbox is tapped or children checkbox is tapped.</li>
+</ul>
+
+## 1.0.7
+<ul>
+<li>Updates documentation on README.md.</li>
+<li>License Updated.</li>
 </ul>

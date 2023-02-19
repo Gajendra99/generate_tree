@@ -22,7 +22,9 @@ To use this package, add <b>generate_tree</b> as a dependency in your pubspec.ya
 </li>
 <li><b>Multi select checkbox</b>
 <ul>
-<li>set 'selectOneToAll' property 'true' to select all children</li></ul>
+<li>set 'selectOneToAll' property 'true' to select all children</li>
+<li>get all node details in onChecked()</li>
+</ul>
 </li>
 <li><b>change the colors of checkbox</b></li>
 <li><b>change the colors of text</b></li>
@@ -41,7 +43,7 @@ Follow this steps to use this package
 
 ## Install 
 ```html
-generate_tree: ^0.0.5
+generate_tree: ^1.0.7
 ```
 
 ## Import package
