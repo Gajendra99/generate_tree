@@ -84,7 +84,10 @@ class _GenerateTree extends State<GenerateTree> {
               var checked = selectOneToAll
                   ? (map['${node.commonID}'] == 1 ? true : false)
                   : node.checked;
-              widget.onChecked(node, checked, node.id);
+              TreeNode selectedNode =
+                  widget.data.where((node) => node.id == (node.commonID)).first;
+              widget.onChecked(
+                  selectOneToAll ? selectedNode : node, checked, node.id);
             });
           },
         ),

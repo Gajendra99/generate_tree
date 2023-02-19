@@ -113,16 +113,16 @@ class MyHomePage extends StatelessWidget {
       ),
       body: GenerateTree(
         data: treeNodes,
-        selectOneToAll: false,
-        textColor: Colors.blue,
+        selectOneToAll: true,
+        textColor: Colors.black,
         onChecked: (node, checked, commonID) {
           print('isChecked : $checked');
           print('common Node ID : ${commonID}');
           print(
               'children node data : ${node.children.map((e) => '${e.title}')}');
         },
-        checkBoxColor: Colors.blue,
-        childrenPadding: EdgeInsets.only(left: 40, top: 0, right: 0, bottom: 0),
+        checkBoxColor: Colors.green,
+        childrenPadding: EdgeInsets.only(left: 30, top: 0, right: 0, bottom: 0),
       ),
     );
   }
