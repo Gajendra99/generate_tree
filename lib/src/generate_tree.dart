@@ -5,18 +5,18 @@ import '../treeNode.dart';
 class GenerateTree extends StatefulWidget {
   final List<TreeNode> data;
   final bool selectOneToAll;
-  final Function(TreeNode node, bool checked, int commonID) onChecked;
+  final Function(TreeNode node, bool checked, int commonId) onChecked;
   Color? textColor;
   Color? checkBoxColor;
   EdgeInsets? childrenPadding;
 
   GenerateTree(
       {this.checkBoxColor,
-        this.textColor,
-        this.childrenPadding,
-        required this.onChecked,
-        required this.data,
-        required this.selectOneToAll});
+      this.textColor,
+      this.childrenPadding,
+      required this.onChecked,
+      required this.data,
+      required this.selectOneToAll});
 
   @override
   _GenerateTree createState() => _GenerateTree();
@@ -29,7 +29,6 @@ class _GenerateTree extends State<GenerateTree> {
   }
 
   Map<String, int> map = {};
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -41,12 +40,6 @@ class _GenerateTree extends State<GenerateTree> {
   }
 
   Widget _buildNode(TreeNode node, EdgeInsets childrenPadding) {
-    var selectOneToAll =
-    widget.selectOneToAll != null ? widget.selectOneToAll : false;
-    if (!map.containsKey('${node.commonID}') && selectOneToAll) {
-      map['${node.commonID}'] = node.checked ? 1 : 0;
-    }
-
     var nonCheckedIcon = Icon(
       Icons.check_box_outline_blank,
       color: widget.checkBoxColor ?? Colors.green,
@@ -72,30 +65,27 @@ class _GenerateTree extends State<GenerateTree> {
           ),
         ),
         leading: IconButton(
-          icon: selectOneToAll
-              ? (map['${node.commonID}'] == 1 ? checkedIcon : nonCheckedIcon)
-              : (node.checked ? checkedIcon : nonCheckedIcon),
+          icon: node.checked ? checkedIcon : nonCheckedIcon,
           onPressed: () {
             setState(() {
-              selectOneToAll
-                  ? (map['${node.commonID}'] =
-              map['${node.commonID}'] == 1 ? 0 : 1)
-                  : node.checked = !node.checked;
-              var checked = selectOneToAll
-                  ? (map['${node.commonID}'] == 1 ? true : false)
-                  : node.checked;
-              TreeNode selectedNode =
-                  widget.data.where((node) => node.id == (node.commonID)).first;
-              widget.onChecked(
-                  selectOneToAll ? selectedNode : node, checked, node.id);
+              _toggleNodeSelection(node);
+              widget.onChecked(node, node.checked, node.id);
             });
           },
         ),
         children: node.children
             .map((child) =>
-            _buildNode(child, widget.childrenPadding ?? EdgeInsets.all(0)))
+                _buildNode(child, widget.childrenPadding ?? EdgeInsets.all(0)))
             .toList(),
       ),
     );
+  }
+
+  void _toggleNodeSelection(TreeNode node) {
+    node.checked = !node.checked;
+    for (var child in node.children) {
+      // child.checked = node.checked;
+      _toggleNodeSelection(child);
+    }
   }
 }
