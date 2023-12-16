@@ -14,6 +14,7 @@ To use this package, add <b>generate_tree</b> as a dependency in your pubspec.ya
 </Table>
 
 ## Features
+
 <ul>
 <li><b>Single tick checkbox</b>
 <ul>
@@ -41,9 +42,10 @@ To use this package, add <b>generate_tree</b> as a dependency in your pubspec.ya
 
 Follow this steps to use this package
 
-## Install 
+## Install
+
 ```html
-generate_tree: ^1.0.7
+generate_tree: ^2.0.0
 ```
 
 ## Import package
@@ -53,6 +55,7 @@ import 'generate_tree/generate_tree.dart';
 ```
 
 first you will need a data list:
+
 ```dart
 final List data = [
       {
@@ -165,10 +168,10 @@ Widget build(BuildContext context) {
 }
 ```
 
-## Developer 
+## Developer
+
 <H3>Gajendra Somawat</H3>
 <p>Instagram: <a href="https://www.instagram.com/gajendra_menaria9">gajendra_menaria9</a></p>
-
 
 ## Additional Details
 
