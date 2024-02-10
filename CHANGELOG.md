@@ -40,3 +40,9 @@
 <ul>
 <li>No updates</li>
 </ul>
+
+## 2.1.0
+
+<ul>
+<li>Reverse Selection - Parant node will be checked when any of the child node is checked.</li>
+</ul>

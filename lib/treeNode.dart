@@ -7,7 +7,6 @@ class TreeNode {
   String title;
   List<TreeNode> children;
 
-
   TreeNode({
     required this.checked,
     required this.show,
@@ -16,7 +15,6 @@ class TreeNode {
     required this.commonID,
     required this.title,
     required this.children,
-
   });
 
   factory TreeNode.fromJson(Map<String, dynamic> json) {
@@ -38,10 +36,7 @@ class TreeNode {
     for (var child in children) {
       title.add(child.title);
       title.addAll(child.getAllChildrenTitles());
-
     }
     return title;
   }
-
-
 }

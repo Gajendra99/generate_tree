@@ -73,25 +73,25 @@ class MyHomePage extends StatelessWidget {
               {
                 "checked": true,
                 "children": [],
-                "id": 311,
+                "id": 321,
                 "commonID": 3,
-                "pid": 31,
+                "pid": 32,
                 "show": false,
-                "title": "Parent title 3.1.1"
+                "title": "Parent title 3.2.1"
               },
               {
                 "checked": true,
                 "children": [],
-                "id": 312,
+                "id": 322,
                 "commonID": 3,
-                "pid": 31,
+                "pid": 32,
                 "show": false,
-                "title": "Parent title 3.1.2"
+                "title": "Parent title 3.2.2"
               }
             ],
             "id": 32,
             "commonID": 3,
-            "pid": 2,
+            "pid": 3,
             "show": false,
             "title": "Parent title 3.2"
           }
@@ -105,7 +105,7 @@ class MyHomePage extends StatelessWidget {
     ];
 
     final List<TreeNode> treeNodes =
-    data.map((item) => TreeNode.fromJson(item)).toList();
+        data.map((item) => TreeNode.fromJson(item)).toList();
 
     return Scaffold(
       appBar: AppBar(
