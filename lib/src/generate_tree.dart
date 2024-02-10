@@ -223,9 +223,11 @@ class _GenerateTree extends State<GenerateTree> {
 
     //if it have parent node then check all childrens are checked or non checked
     bool canCheck = true;
-    for (int i = 0; i < node.children.length; i++) {
-      if (node.children[i].checked != checked) {
-        canCheck = false;
+    if (!checked) {
+      for (int i = 0; i < node.children.length; i++) {
+        if (node.children[i].checked != checked) {
+          canCheck = false;
+        }
       }
     }
 
