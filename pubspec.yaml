@@ -1,6 +1,6 @@
 name: generate_tree
 description: Create beautiful tree structure in flutter
-version: 2.1.0
+version: 2.2.0
 homepage: https://github.com/Gajendra99/generate_tree.git
 
 environment:

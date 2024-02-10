@@ -46,3 +46,9 @@
 <ul>
 <li>Reverse Selection - Parant node will be checked when any of the child node is checked.</li>
 </ul>
+
+## 2.2.0
+
+<ul>
+<li>Reverse Check/Uncheck issue fixed.</li>
+</ul>
