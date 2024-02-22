@@ -53,7 +53,7 @@
 <li>Reverse Check/Uncheck issue fixed.</li>
 </ul>
 
-## 2.2.1
+## 2.2.2
 
 <ul>
 <li>getAllChildrenTitle updated in treeNode model</li>

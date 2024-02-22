@@ -31,12 +31,12 @@ class TreeNode {
     );
   }
 
-  List<String> getAllChildrenTitles() {
-    List<String> title = [];
+  List<int> getAllChildrenTitles() {
+    List<int> id = [];
     for (var child in children) {
-      title.add(child.title);
-      title.addAll(child.getAllChildrenTitles());
+      id.add(child.id);
+      id.addAll(child.getAllChildrenTitles());
     }
-    return title;
+    return id;
   }
 }
