@@ -52,16 +52,19 @@ class _GenerateTree extends State<GenerateTree> {
       color: widget.checkBoxColor ?? Colors.green,
     );
 
+    // Check if the current node is a leaf (has no children)
+    bool isLeafNode = node.children.isEmpty;
+
     return Padding(
       padding: childrenPadding,
       child: ExpansionTile(
         iconColor: widget.checkBoxColor,
         collapsedIconColor: widget.checkBoxColor,
-        tilePadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+        tilePadding: EdgeInsets.zero,
         initiallyExpanded: node.show,
         title: Container(
-          margin: EdgeInsets.only(left: 0),
-          padding: EdgeInsets.only(left: 0),
+          margin: EdgeInsets.zero,
+          padding: EdgeInsets.zero,
           child: Text(
             node.title,
             style: TextStyle(color: widget.textColor ?? Colors.black),
@@ -76,6 +79,8 @@ class _GenerateTree extends State<GenerateTree> {
             });
           },
         ),
+        // Hide the dropdown icon if it's a leaf node
+        trailing: isLeafNode ? SizedBox.shrink() : null,
         children: node.children
             .map((child) =>
                 _buildNode(child, widget.childrenPadding ?? EdgeInsets.all(0)))
