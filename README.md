@@ -45,7 +45,7 @@ Follow this steps to use this package
 ## Install
 
 ```html
-generate_tree: ^2.2.2
+generate_tree: ^2.2.3
 ```
 
 ## Import package

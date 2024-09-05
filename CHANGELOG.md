@@ -58,3 +58,9 @@
 <ul>
 <li>getAllChildrenTitle updated in treeNode model</li>
 </ul>
+
+## 2.2.3
+
+<ul>
+<li>Removed last tree node check </li>
+</ul>
